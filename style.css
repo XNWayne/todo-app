@@ -1,0 +1,186 @@
+/* Colors */
+:root {
+  /* ## Primary */
+
+  --brightblue: hsl(220, 98%, 61%);
+  --checkbackground: 
+    linear-gradient (hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+  );
+
+  /* ## Neutral */
+  /* Light Theme */
+  --verylightgray: hsl(0, 0%, 98%);
+  --verylightgrayishblue: hsl(236, 33%, 92%);
+  --lightgrayishblue: hsl(233, 11%, 84%);
+  --darkgrayishblue: hsl(236, 9%, 61%);
+  --verydarkgrayishblue: hsl(235, 19%, 35%);
+
+  /*Dark Theme */
+
+  --verydarkblue: hsl(235, 21%, 11%);
+  --verydarkdesaturatedblue: hsl(235, 24%, 19%);
+  --lightgrayishblue: hsl(234, 39%, 85%);
+  --lightgrayishblue-hover: hsl(236, 33%, 92%);
+  --darkgrayishblue-dark: hsl(234, 11%, 52%);
+  --verydarkgrayishblue-dark: hsl(233, 14%, 35%);
+  --verydarkgrayishblue-dark2: hsl(237, 14%, 26%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.125rem;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.theme-dark {
+    background-image: url(./assets/images/bg-desktop-dark.jpg);
+    background-size: 100% 17rem ;
+    background-repeat: no-repeat;
+    background-color: var(--verydarkblue);
+}
+
+.container {
+    width: 35rem;
+    margin-top: 4rem;
+    margin-inline: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .title h1 {
+    color: var(--verylightgray);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 2.5rem;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.theme-dark .input-section {
+    background-color: var(--verydarkdesaturatedblue);
+}
+
+.input-section span {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid var(--verydarkgrayishblue-dark);
+    border-radius: 50px;
+}
+
+.input-section form {
+    flex-grow: 1;
+    width: 80%;
+}
+
+.input-section input {
+    /* flex-grow: 1; */
+    background: transparent;
+    border: none;
+    outline: 0;
+    width: 100%;
+    padding: .25rem .5rem;
+}
+
+
+.theme-dark .input-section input {
+    color: var(--verylightgrayishblue);
+    caret-color: var(--brightblue);
+}
+
+.theme-dark .todos-section {
+    background: var(--verydarkdesaturatedblue);
+    color: var(--verylightgrayishblue);
+}
+
+.todos-section {
+    margin-top: 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.todos-section ul{
+    list-style: none;
+}
+
+.todos-section li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border-bottom: 1px solid var(--verydarkgrayishblue-dark);
+    padding: 1rem 1.5rem;
+}
+
+.todos-section li .todo-title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.todos-section li .checkmark {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid var(--verydarkgrayishblue-dark);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.todos-section li button {
+    background: none;
+    text-align: center;
+    border: none;
+}
+
+.todos-section  .completed {
+    text-decoration: line-through;
+}
+
+.theme-dark .todos-section  .completed {
+    color: var(--verydarkgrayishblue-dark);
+}
+
+.todos-section  .completed span{
+    background: center url(./assets/images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    /* border: none; */
+    transition: all 1s;
+}
+
+
+
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

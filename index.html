@@ -14,13 +14,38 @@
 
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="theme-dark">
+  <div class="container">
+
+    <div class="header">
+      <div class="title">
+        <h1>Todo</h1>
+      </div>
+      <div class="theme-changer">
+        <img src="./assets/images/icon-sun.svg" alt="dark-light">
+      </div>
+    </div>
+
+    <div class="input-section">
+      <span id="circle-input"></span>
+      <form onsubmit="addNewTodo(event)">
+        <input type="text" name="newtodo" id="add-todo" placeholder="Create a new todo...">
+      </form>
+    </div>
+
+    <div class="todos-section">
+      <ul class="todo-items">
+        <li>
+         <div class="todo-title"> <span class="checkmark"></span>Complete online JS course</div> <button class="delete"><img src="./assets/images/icon-cross.svg" alt="delete"></button> 
+        </li>
+        <li>
+         <div class="todo-title completed"> <span class="checkmark"></span>Complete online JS course</div> <button class="delete"><img src="./assets/images/icon-cross.svg" alt="delete"></button> 
+        </li>
+      </ul>
+    </div>
+
+  </div>
 
   Todo
 
